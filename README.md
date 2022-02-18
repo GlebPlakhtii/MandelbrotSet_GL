@@ -16,6 +16,7 @@ you should comment one of `#define` in ***fragment.glsl***:
 - To change constant **c = a + b*i*** for Julia set:   
   - to increase/decreace a : **`f` `g`**
   - to increase/decreace b : **`c` `v`**
+ - To set own value of iterations press **`i`** and enter value in console
   
 
 # Screenshots:
