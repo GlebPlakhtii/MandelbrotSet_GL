@@ -1,4 +1,7 @@
 #version 330 core
+//#define Julia
+#define Mandelbrot
+
 out vec4 FragColor;
 in vec3 pos;
 uniform float r;
@@ -28,9 +31,12 @@ return vec2(pow(z.x,2) - pow(z.y,2) + c.x,2*z.x*z.y+ c.y);
 
 vec3 isInSet(vec2 pos)
 {	
-	
+#ifdef Julia
 	vec2 c = vec2(.34+i,.34+j);
-	//vec2 c = pos;
+#endif
+#ifdef Mandelbrot
+	vec2 c = pos;
+#endif
 	vec2 zn = res(pos,c);
 	
 	int s = 200;
